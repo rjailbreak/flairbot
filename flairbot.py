@@ -1,5 +1,8 @@
 import praw
 
+USERNAME=''
+USER_AGENT=''
+
 print "||===============================Starting flairbot.py===============================||"
 
 DEVICETYPE = {'200': 'iPad 1st gen',
@@ -67,7 +70,9 @@ subNames = {0: "jailbreak and iOSThemes",
 
 
 def main():
-
+    global USERNAME
+    global USER_AGENT
+    r = praw.Reddit(USERNAME, user_agent=USER_AGENT)
     print 'Searching Inbox.'
     pms = r.inbox.unread(mark_read=True, limit=100)
     for pm in pms:

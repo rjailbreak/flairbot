@@ -1,1 +1,3 @@
 *.pyc
+creds.py
+praw.ini

@@ -8,7 +8,6 @@ print "||===============================Starting flairbot.py====================
 url = "https://raw.githubusercontent.com/rjailbreak/flairbot/master/data.json"
 response = urllib.urlopen(url)
 data = json.loads(response.read())
-print data
 
 IOSTYPE = data.versions
 subNames = data.subreddits

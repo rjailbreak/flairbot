@@ -14,7 +14,7 @@ response = urllib.urlopen(url)
 data = json.loads(response.read())
 
 IOSTYPE = data['versions']
-subNames = data['subreddits']
+SUB_NAMES = data['subreddits']
 
 DEVICES = dict()
 DEVICES.update(data['devices']['iPad'])
@@ -25,6 +25,9 @@ DEVICES.update(data['devices']['iPod'])
 def main():
     global BOT_NAME
     global USER_AGENT
+    global IOSTYPE
+    global SUB_NAMES
+    global DEVICES
     r = praw.Reddit(BOT_NAME, user_agent=USER_AGENT)
     print 'Searching Inbox.'
     pms = r.inbox.unread(mark_read=True, limit=100)
@@ -45,8 +48,8 @@ def main():
             # device
             try:
                 if arr[0].startswith("0"):
-                    value = int(arr[0][1:])
-                    device = DEVICETYPE[str(value)]
+                    value = str(arr[0][1:])
+                    device = DEVICES[value]
                 else:
                     error = 1
                 if arr[1].startswith("1"):
@@ -57,7 +60,7 @@ def main():
                 else:
                     error = 1
                 if arr[2].startswith("2"):
-                    sub = int(arr[2][1:])
+                    sub = str(arr[2][1:])
             except:
                 error = 1
             if error == 1:
@@ -69,11 +72,11 @@ def main():
                 flairText = device + ios
                 if sub != 0:
                     try:
-                        r.subreddit(subNames[sub]).flair.set(
+                        r.subreddit(SUB_NAMES[sub]).flair.set(
                             redditor=pauthor.name, text=flairText, css_class="flair-default")
-                        subText = "/r/" + subNames[sub]
-                    except Exception:
-                        print "Author deleted"
+                        subText = "/r/" + SUB_NAMES[sub]
+                    except Exception as e:
+                        print "User deleted"
                         pm.mark_read()
                         continue
                 else:

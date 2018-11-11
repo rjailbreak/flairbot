@@ -1,7 +1,7 @@
 # flairbot
 Flair bot used on /r/jailbreak and /r/iOSthemes.
 
-We have a [custom php](http://rjailbreak.com/flair) (boo, I know, this was written 4+ years ago) which generates a message that is sent to this bot. This script just reads those messages from its inbox and assigns the user the pre-approved flair on their selected subreddit.
+On rjailbreak.com/flair (also [open source](https://github.com/rjailbreak/website-flair)), you can set your user flair (the text that comes after your username) by generating a message which is sent to this bot. This script just reads those messages from the bot's inbox and assigns the user the pre-approved flair on their selected subreddit.
 
 ## Requirements
 

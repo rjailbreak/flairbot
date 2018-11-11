@@ -1,7 +1,11 @@
-import praw, urllib, json
+import praw
+import urllib
+import json
 
-USERNAME=''
-USER_AGENT=''
+import creds
+
+BOT_NAME = creds.BOT_NAME
+USER_AGENT = creds.USER_AGENT
 
 print "||===============================Starting flairbot.py===============================||"
 
@@ -9,18 +13,19 @@ url = "https://raw.githubusercontent.com/rjailbreak/flairbot/master/data.json"
 response = urllib.urlopen(url)
 data = json.loads(response.read())
 
-IOSTYPE = data.versions
-subNames = data.subreddits
+IOSTYPE = data['versions']
+subNames = data['subreddits']
 
 DEVICES = dict()
-DEVICES.update(data.devices.iPad)
-DEVICES.update(data.devices.iPhone)
-DEVICES.update(data.devices.iPod)
+DEVICES.update(data['devices']['iPad'])
+DEVICES.update(data['devices']['iPhone'])
+DEVICES.update(data['devices']['iPod'])
+
 
 def main():
-    global USERNAME
+    global BOT_NAME
     global USER_AGENT
-    r = praw.Reddit(USERNAME, user_agent=USER_AGENT)
+    r = praw.Reddit(BOT_NAME, user_agent=USER_AGENT)
     print 'Searching Inbox.'
     pms = r.inbox.unread(mark_read=True, limit=100)
     for pm in pms:

@@ -64,7 +64,7 @@ def main():
             except:
                 error = 1
             if error == 1:
-                pauthor.message('Flair Rejected on r/jailbreak',
+                pauthor.message('Flair Rejected on /r/jailbreak',
                                 ('You edited something in the message before sending or ' +
                                  'something went wrong. Please try again.'))
                 print "Flair rejected: " + device + ios
@@ -74,7 +74,7 @@ def main():
                     try:
                         r.subreddit(SUB_NAMES[sub]).flair.set(
                             redditor=pauthor.name, text=flairText, css_class="flair-default")
-                        subText = "r/" + SUB_NAMES[sub]
+                        subText = "/r/" + SUB_NAMES[sub]
                     except Exception as e:
                         print "User deleted"
                         pm.mark_read()
@@ -84,7 +84,7 @@ def main():
                                                        text=flairText, css_class="flair-default")
                     r.subreddit('iOSThemes').flair.set(redditor=pauthor.name,
                                                        text=flairText, css_class="flair-default")
-                    subText = "r/jailbreak and r/iOSthemes"
+                    subText = "/r/jailbreak and /r/iOSthemes"
                 pauthor.message('Flair Approved', 'Your subreddit flair, "' + flairText +
                                 '" on ' + subText + ' has been approved. Thank you for using ' +
                                 '/u/JailbreakFlairBot which was created by /u/ibbignerd.')

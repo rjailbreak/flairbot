@@ -87,7 +87,7 @@ def main():
                     subText = "r/jailbreak and r/iOSthemes"
                 pauthor.message('Flair Approved', 'Your subreddit flair, "' + flairText +
                                 '" on ' + subText + ' has been approved. Thank you for using ' +
-                                '/u/JailbreakFlairBot which was created by /u/ibbignerd.')
+                                'u/JailbreakFlairBot which was created by u/ibbignerd.')
                 print "Approved flair, \"" + flairText + "\" for " + pauthor.name + " on " + subText
             pm.mark_read()
         else:

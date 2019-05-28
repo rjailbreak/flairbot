@@ -51,7 +51,9 @@
             "402": "iPod touch 3rd gen",
             "403": "iPod touch 4th gen",
             "404": "iPod touch 5th gen",
-            "405": "iPod touch 6th gen"
+            "405": "iPod touch 6th gen",
+            "406": "iPod touch 7th gen"
+
         }
     },
     "versions": [

@@ -58,6 +58,14 @@
             "405": "iPod touch 6th gen",
             "406": "iPod touch 7th gen"
 
+        },
+        "AppleTV": {
+            "500": "AppleTV",
+            "501": "AppleTV 2nd gen",
+            "502": "AppleTV 3rd gen",
+            "503": "AppleTV 4th gen",
+            "504": "AppleTV5 4K",
+           
         }
     },
     "versions": [

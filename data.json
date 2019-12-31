@@ -57,15 +57,13 @@
             "404": "iPod touch 5th gen",
             "405": "iPod touch 6th gen",
             "406": "iPod touch 7th gen"
-
         },
         "Apple TV": {
             "500": "Apple TV",
             "501": "Apple TV 2nd gen",
             "502": "Apple TV 3rd gen",
             "503": "Apple TV 4th gen",
-            "504": "Apple TV 4K",
-           
+            "504": "Apple TV 4K",   
         },
          "Apple Watch": {
             "600": "Apple Watch (1st gen)",
@@ -73,8 +71,7 @@
             "602": "Apple Watch Series 2",
             "603": "Apple Watch Series 3",
             "604": "Apple Watch Series 4",
-            "605": "Apple Watch Series 5",
-           
+            "605": "Apple Watch Series 5",   
         }
     },
     "versions": [

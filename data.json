@@ -66,6 +66,15 @@
             "503": "Apple TV 4th gen",
             "504": "Apple TV 4K",
            
+        },
+         "Apple Watch": {
+            "600": "Apple Watch (1st gen)",
+            "601": "Apple Watch Series 1",
+            "602": "Apple Watch Series 2",
+            "603": "Apple Watch Series 3",
+            "604": "Apple Watch Series 4",
+            "605": "Apple Watch Series 5",
+           
         }
     },
     "versions": [

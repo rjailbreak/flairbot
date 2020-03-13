@@ -1,5 +1,5 @@
 import praw
-import urllib
+import urllib.request
 import json
 
 import creds
@@ -7,12 +7,12 @@ import creds
 BOT_NAME = creds.BOT_NAME
 USER_AGENT = creds.USER_AGENT
 
-print "||===============================Starting flairbot.py===============================||"
+print("||===============================Starting flairbot.py===============================||")
 
 url = "https://raw.githubusercontent.com/rjailbreak/flairbot/master/data.json"
-response = urllib.urlopen(url)
+response = urllib.request.urlopen(url)
 data = json.loads(response.read())
-
+print()
 IOSTYPE = data['versions']
 SUB_NAMES = data['subreddits']
 
@@ -29,12 +29,12 @@ def main():
     global SUB_NAMES
     global DEVICES
     r = praw.Reddit(BOT_NAME, user_agent=USER_AGENT)
-    print 'Searching Inbox.'
+    print('Searching Inbox.')
     pms = r.inbox.unread(mark_read=True, limit=100)
     for pm in pms:
         if not pm.author:
             pm.mark_read()
-            print "User was deleted"
+            print("User was deleted")
             continue
         pauthor = pm.author
         pbody = pm.body
@@ -67,7 +67,7 @@ def main():
                 pauthor.message('Flair Rejected on r/jailbreak',
                                 ('You edited something in the message before sending or ' +
                                  'something went wrong. Please try again.'))
-                print "Flair rejected: " + device + ios
+                print("Flair rejected: " + device + ios)
             else:
                 flairText = device + ios
                 if sub != 0:
@@ -75,8 +75,8 @@ def main():
                         r.subreddit(SUB_NAMES[sub]).flair.set(
                             redditor=pauthor.name, text=flairText, css_class="flair-default")
                         subText = "r/" + SUB_NAMES[sub]
-                    except Exception as e:
-                        print "User deleted"
+                    except Exception:
+                        print("User deleted")
                         pm.mark_read()
                         continue
                 else:
@@ -88,11 +88,11 @@ def main():
                 pauthor.message('Flair Approved', 'Your subreddit flair, "' + flairText +
                                 '" on ' + subText + ' has been approved. Thank you for using ' +
                                 'u/JailbreakFlairBot which was created by u/ibbignerd.')
-                print "Approved flair, \"" + flairText + "\" for " + pauthor.name + " on " + subText
+                print("Approved flair, \"" + flairText + "\" for " + pauthor.name + " on " + subText)
             pm.mark_read()
         else:
             pm.mark_read()
-    print "Done!"
+    print("Done!")
 
 
 if __name__ == '__main__':

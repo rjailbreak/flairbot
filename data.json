@@ -25,7 +25,11 @@
             "321": "iPhone 11",
             "322": "iPhone 11 Pro",
             "323": "iPhone 11 Pro Max",
-            "324": "iPhone SE, 2nd gen"
+            "324": "iPhone SE, 2nd gen",
+            "325": "iPhone 12",
+            "326": "iPhone 12 Mini",
+            "327": "iPhone 12 Pro",
+            "328": "iPhone 12 Pro Max"
         },
         "iPad": {
             "200": "iPad 1st gen",

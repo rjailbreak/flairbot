@@ -52,11 +52,13 @@
             "217": "iPad Pro 11",
             "218": "iPad Pro 12.9, 4th gen",
             "219": "iPad Pro 11, 2nd gen",
-            "220": "iPad mini",
-            "221": "iPad mini 2",
-            "222": "iPad mini 3",
-            "223": "iPad mini 4",
-            "224": "iPad mini 5"
+            "220": "iPad Pro 12.9, M1",
+            "221": "iPad Pro 11, M1",
+            "222": "iPad mini",
+            "223": "iPad mini 2",
+            "224": "iPad mini 3",
+            "225": "iPad mini 4",
+            "226": "iPad mini 5"
         },
         "iPod": {
             "400": "iPod touch 1st gen",

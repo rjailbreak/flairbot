@@ -34,7 +34,11 @@
             "330": "iPhone 13 Mini",
             "331": "iPhone 13 Pro",
             "332": "iPhone 13 Pro Max",
-            "333": "iPhone SE, 3rd gen"
+            "333": "iPhone SE, 3rd gen",
+            "334": "iPhone 14",
+            "335": "iPhone 14 Plus",
+            "336": "iPhone 14 Pro",
+            "337": "iPhone 14 Pro Max"
         },
         "iPad": {
             "200": "iPad 1st gen",

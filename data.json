@@ -52,7 +52,10 @@
             "348": "iPhone 17 Pro",
             "349": "iPhone 17 Pro Max",
             "350": "iPhone Air",
-            "351": "iPhone 17e"
+            "351": "iPhone 17e",
+            "352": "iPhone 18 Pro",
+            "353": "iPhone 18 Pro Max",
+            "354": "iPhone Duo"
         },
         "iPad": {
             "200": "iPad 1st gen",
@@ -99,7 +102,8 @@
             "230": "iPad mini 4",
             "231": "iPad mini 5",
             "232": "iPad mini 6",
-            "244": "iPad mini, A17 Pro"
+            "244": "iPad mini, A17 Pro",
+            "245": "iPad mini, A20 Pro"
         },
         "iPod": {
             "400": "iPod touch 1st gen",
@@ -117,12 +121,19 @@
             "503": "Apple TV HD (4th Gen)",
             "504": "Apple TV 4K (1st Gen)",
             "505": "Apple TV 4K (2nd Gen)",
-            "506": "Apple TV 4K (3rd Gen)"
+            "506": "Apple TV 4K (3rd Gen)",
+            "507": "Apple TV 4K (4th Gen)"
         }
     },
     "versions": [
         "None",
+        "27.2",
+        "27.1",
+        "27.0.1",
         "27.0",
+        "26.7.2",
+        "26.7.1",
+        "26.7",
         "26.6.1",
         "26.6",
         "26.5.2",
@@ -138,6 +149,7 @@
         "26.1",
         "26.0.1",
         "26.0",
+        "18.7.11",
         "18.7.10",
         "18.7.9",
         "18.7.8",
